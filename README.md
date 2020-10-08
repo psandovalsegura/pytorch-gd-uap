@@ -6,7 +6,7 @@ This repository **depends on PyTorch**, but you can refer to [the original repos
 ## Overview
 A universal adversarial perturbation (UAP) is an image-agnostic perturbation vector that, when added to any image, leads a classifier to change its classification of that image. In the example below, VGG-16 classifies the clean image on the left as a 'piggy bank'. But when a UAP (under an imperceptibility constraint) is added to the image, VGG-16 misclassifies the image as a 'theater curtain'.
 
-![uap_addition](uap_example.png)
+![uap_addition](imgs/uap_addition.png)
 
 
 The main algorithm for optimizing a UAP is in `gduap.py`. The range prior and the data prior, described in the original paper, are not implemented here.
