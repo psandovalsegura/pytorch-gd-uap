@@ -127,3 +127,28 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Open files
+._*.py
+._*.gitignore
+
+# Personal logs
+logs/
+Analyze.ipynb
+Debug.ipynb
+
+# Best perturbations
+perturbations/463159_*.npy
+!perturbations/463159_vgg16_no_data_iter=2023_val=voc2012_fr=963.npy
+perturbations/vgg19_*.npy
+!perturbations/vgg19_no_data_iter=2572_val=voc2012_fr=941.npy
+perturbations/463456_*.npy
+!perturbations/463456_googlenet_no_data_iter=3501_val=voc2012_fr=678.npy
+perturbations/463458_*.npy
+!perturbations/463458_resnet50_no_data_iter=2924_val=voc2012_fr=688.npy
+perturbations/463459_*.npy
+!perturbations/463459_resnet152_no_data_iter=3443_val=voc2012_fr=626.npy
+perturbations/vgg16_*.npy
+
+# SLURM jobs
+slurm-*.out
