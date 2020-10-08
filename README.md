@@ -1,10 +1,13 @@
 # pytorch-gd-uap
 Code for the paper [Generalizable Data-free Objective for Crafting Universal Adversarial Perturbations](https://arxiv.org/abs/1801.08092) by Mopuri et al., 2018.
 
-This repository **depends on PyTorch**, but you can refer to [the original repository](https://github.com/val-iisc/GD-UAP) if you prefer TensorFlow.
+This repository **depends on PyTorch**, but you can refer to [the original repository](https://github.com/val-iisc/GD-UAP) if you prefer TensorFlow. This implementation was developed by Pedro Sandoval-Segura.
 
 ## Overview
-A universal adversarial perturbation (UAP) is an image-agnostic perturbation vector that, when added to any image, leads a classifier to change its classification of the image.
+A universal adversarial perturbation (UAP) is an image-agnostic perturbation vector that, when added to any image, leads a classifier to change its classification of that image. In the example below, VGG-16 classifies the clean image on the left as a 'piggy bank'. But when a UAP (under an imperceptibility constraint) is added to the image, VGG-16 misclassifies the image as a 'theater curtain'.
+
+![uap_addition](uap_example.png)
+
 
 The main algorithm for optimizing a UAP is in `gduap.py`. The range prior and the data prior, described in the original paper, are not implemented here.
 
