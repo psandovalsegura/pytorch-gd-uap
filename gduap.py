@@ -111,7 +111,7 @@ def get_fooling_rate(model, delta, data_loader, device, disable_tqdm=False):
         for batch in tqdm(data_loader, disable=disable_tqdm):
             images, labels = batch
             images = images.to(device)
-            adv_images = torch.add(delta, images)
+            adv_images = torch.add(delta, images).clamp(0, 1)
 
             outputs = model(normalize(images))
             adv_outputs = model(normalize(adv_images))
